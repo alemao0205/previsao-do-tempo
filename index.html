@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsão do tempo</title>
+    <link rel="shortcut icon" href="./icon/meteorologia.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script><script src="https://public.radio.co/playerapi/jquery.radiocoplayer.min.js"></script>
+</head>
+<link rel="stylesheet" href="estilo.css">
+
+<body>
+    <div class="caixa-maior">
+        
+        <input id="input-cidade" class="input-cidade" placeholder="Digite a cidade">
+
+        <button id="botao-buscar" onclick="cliqueNoBotao()">
+            <img class="lupa" src="https://www.svgrepo.com/show/415178/find-search-secure.svg">
+        </button>
+
+        <div class="caixa-media">
+
+            <h2 class="cidade">Tempo em São Paulo</h2>
+
+            <p class="temp">21°c graus</p>
+
+            <img class="icone" src="https://openweathermap.org/img/wn/04n.png">
+
+            <p class="umidade">umidade: 70%</p>
+
+        </div>
+    </div>
+    <div class="mapa-windy">
+
+        <iframe width="650" height="450" src="https://embed.windy.com/embed.html?type=map&location=coordinates&metricRain=mm&metricTemp=°C&metricWind=km/h&zoom=8&overlay=wind&product=ecmwf&level=surface&lat=-22.867&lon=-42.803" frameborder="0"></iframe>
+
+    </div>
+<div class="radio">
+    <iframe src="https://tunein.com/embed/player/s85089/" style="width:100%; height:100px;" scrolling="no" frameborder="no"></iframe>
+</div>
+    <script src="scripts.js"></script>
+</body>
+<script>$('.radioplayer').radiocoPlayer();</script>
+</html>
